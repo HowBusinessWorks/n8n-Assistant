@@ -1,0 +1,39 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__supabase__list_tables",
+      "mcp__supabase__execute_sql",
+      "Bash(npm install:*)",
+      "mcp__supabase__apply_migration",
+      "mcp__supabase__list_extensions",
+      "mcp__supabase__get_project_url",
+      "mcp__supabase__get_anon_key",
+      "Bash(rm:*)",
+      "WebFetch(domain:clerk.com)",
+      "Bash(grep:*)",
+      "Bash(cp:*)",
+      "Bash(mkdir:*)",
+      "WebFetch(domain:medium.com)",
+      "WebFetch(domain:dev.to)",
+      "Bash(npm run build:*)",
+      "Bash(npm run lint:*)",
+      "Bash(npx tsc:*)",
+      "mcp__supabase__list_edge_functions",
+      "mcp__supabase__deploy_edge_function",
+      "mcp__supabase__search_docs",
+      "Bash(find:*)",
+      "mcp__supabase__get_logs",
+      "Bash(npm run dev:*)",
+      "Bash(mv:*)",
+      "mcp__stripe__create_price",
+      "mcp__stripe__create_product",
+      "mcp__stripe__list_products",
+      "mcp__stripe__list_prices",
+      "Bash(git config:*)"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "supabase"
+  ]
+}

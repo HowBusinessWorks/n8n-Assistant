@@ -1,0 +1,12 @@
+# Supabase Edge Functions Configuration
+[functions.stripe-webhook]
+verify_jwt = false
+
+[functions.cancel-subscription]
+verify_jwt = false
+
+[functions.create-bonus-checkout-session]
+verify_jwt = false
+
+[functions.generate-workflow]
+verify_jwt = false
