@@ -901,7 +901,7 @@ export default function ChatDashboard() {
                   <span className="text-gray-400"> / {usageStats?.generationLimit || 3} workflows remaining</span>
                 </div>
                 {/* Show bonus usage if user has bonus generations remaining */}
-                {usageStats?.bonusRemaining && usageStats.bonusRemaining > 0 && (
+                {usageStats?.bonusRemaining > 0 && (
                   <div className="text-xs text-[#EFD09E] mt-1">
                     +{usageStats.bonusRemaining} bonus generations
                   </div>
