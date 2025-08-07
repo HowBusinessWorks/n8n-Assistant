@@ -28,7 +28,14 @@ export default function Header({ onFreeGenerationsClick }: HeaderProps = {}) {
   };
 
   const handleFreeGenerationsClick = () => {
-    onFreeGenerationsClick?.();
+    if (!isSignedIn) {
+      // If not signed in, show login modal
+      setLoginMode('signin');
+      setShowLogin(true);
+    } else {
+      // If signed in, proceed with navigation
+      onFreeGenerationsClick?.();
+    }
   };
 
   return (
@@ -78,20 +85,12 @@ export default function Header({ onFreeGenerationsClick }: HeaderProps = {}) {
                 />
               </div>
             ) : (
-              <div className="flex items-center space-x-4">
-                <button 
-                  onClick={() => handleAuthClick('signin')}
-                  className="text-gray-300 hover:text-[#EFD09E] transition-colors font-medium"
-                >
-                  Sign In
-                </button>
-                <button 
-                  onClick={handleFreeGenerationsClick}
-                  className="bg-gradient-to-r from-[#EFD09E] to-[#D4AA7D] text-[#272727] px-6 py-2 rounded-lg hover:from-[#D4AA7D] hover:to-[#c19660] transition-all duration-200 transform hover:scale-105 font-semibold"
-                >
-                  Free Generations
-                </button>
-              </div>
+              <button 
+                onClick={handleFreeGenerationsClick}
+                className="bg-gradient-to-r from-[#EFD09E] to-[#D4AA7D] text-[#272727] px-6 py-2 rounded-lg hover:from-[#D4AA7D] hover:to-[#c19660] transition-all duration-200 transform hover:scale-105 font-semibold"
+              >
+                Free Generations
+              </button>
             )}
           </nav>
 
