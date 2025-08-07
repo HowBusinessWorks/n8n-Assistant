@@ -29,7 +29,10 @@
       "mcp__stripe__create_product",
       "mcp__stripe__list_products",
       "mcp__stripe__list_prices",
-      "Bash(git config:*)"
+      "Bash(git config:*)",
+      "Bash(git push:*)",
+      "Bash(git add:*)",
+      "Bash(node:*)"
     ]
   },
   "enableAllProjectMcpServers": true,

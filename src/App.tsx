@@ -3,6 +3,10 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { useAuth } from '@clerk/clerk-react';
 import LandingPage from './components/LandingPage';
 import ChatDashboard from './components/ChatDashboard';
+import PrivacyPolicy from './components/PrivacyPolicy';
+import TermsOfService from './components/TermsOfService';
+import CookiePolicy from './components/CookiePolicy';
+import CookieBanner from './components/CookieBanner';
 
 // Protected Route component
 const ProtectedRoute: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -49,7 +53,13 @@ function App() {
             </ProtectedRoute>
           } 
         />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
+        <Route path="/terms" element={<TermsOfService />} />
+        <Route path="/cookies" element={<CookiePolicy />} />
       </Routes>
+      
+      {/* Global Cookie Banner */}
+      <CookieBanner />
     </BrowserRouter>
   );
 }

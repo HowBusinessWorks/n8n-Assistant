@@ -13,7 +13,7 @@ export default function Benefits() {
       icon: Users,
       title: "No expertise required",
       description: "Anyone can create enterprise-grade workflows. No technical automation knowledge needed.",
-      stat: "95-98% accuracy"
+      stat: "80-98% accuracy"
     },
     {
       icon: Shield,
@@ -71,7 +71,7 @@ export default function Benefits() {
             </div>
             <div className="space-y-2">
               <CheckCircle className="h-8 w-8 text-[#D4AA7D] mx-auto" />
-              <div className="text-2xl font-bold text-white">95-98%</div>
+              <div className="text-2xl font-bold text-white">80-98%</div>
               <div className="text-gray-300">Understanding accuracy</div>
             </div>
             <div className="space-y-2">

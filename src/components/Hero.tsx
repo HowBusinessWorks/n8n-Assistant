@@ -171,16 +171,13 @@ export default function Hero({ onFreeGenerationsClick }: HeroProps = {}) {
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
-            <span className="text-white">From idea to </span>
-            <span className="text-[#EFD09E]">automation</span>
+            <span className="text-white">Create your </span>
+            <span className="text-[#EFD09E]">n8n Workflows</span>
             <span className="text-white block mt-2">
-              in 30 seconds
+              from Plain Text
             </span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
-            Just describe what you want automated in plain English. Our AI instantly creates enterprise-grade n8n workflows that are ready to run.
-          </p>
 
           <div className="max-w-3xl mx-auto mb-6">
             <form onSubmit={handleSubmit} className="relative">

@@ -12,7 +12,7 @@ export default function HowItWorks() {
             <span className="block text-[#D4AA7D]">perfect workflows</span>
           </h2>        
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Our advanced 5-step AI system analyzes 2,600+ real automation examples to generate enterprise-grade workflows with 95-98% accuracy.
+            Our advanced 5-step AI system analyzes 2,600+ real automation examples to generate enterprise-grade workflows with 80-98% accuracy.
           </p>
         </div>
 
@@ -33,7 +33,7 @@ export default function HowItWorks() {
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-4 mt-4">AI understands instantly</h3>
                     <p className="text-gray-300 leading-relaxed mb-6">
-                      Our AI achieves 95-98% accuracy in understanding complex automation requests, no matter how you describe them.
+                      Our AI achieves 80-98% accuracy in understanding complex automation requests, no matter how you describe them.
                     </p>
                     <div className="bg-[#2a2a2a] rounded-xl p-4 border border-[#3a3a3a]">
                       <p className="text-sm text-gray-300 italic">

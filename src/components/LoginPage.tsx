@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { SignIn, SignUp } from '@clerk/clerk-react';
 import { X, Workflow } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
@@ -9,6 +9,7 @@ interface LoginPageProps {
 }
 
 export default function LoginPage({ onClose, mode = 'signin' }: LoginPageProps) {
+  const [currentMode, setCurrentMode] = useState(mode);
   const navigate = useNavigate();
 
   // Handle successful authentication
@@ -27,7 +28,7 @@ export default function LoginPage({ onClose, mode = 'signin' }: LoginPageProps) 
               <Workflow className="h-5 w-5 text-[#272727]" />
             </div>
             <h2 className="text-xl font-bold text-white">
-              {mode === 'signin' ? 'Welcome back' : 'Create account'}
+              {currentMode === 'signin' ? 'Welcome' : 'Create account'}
             </h2>
           </div>
           <button
@@ -42,15 +43,39 @@ export default function LoginPage({ onClose, mode = 'signin' }: LoginPageProps) 
         <div className="p-6">
           <div className="text-center mb-6">
             <p className="text-gray-400">
-              {mode === 'signin' 
+              {currentMode === 'signin' 
                 ? 'Sign in to get your 3 free workflow generations' 
                 : 'Create account to get 3 free workflow generations'
               }
             </p>
           </div>
+
+          {/* Toggle between Sign In and Sign Up */}
+          <div className="flex bg-[#2a2a2a] rounded-lg p-1 mb-6">
+            <button
+              onClick={() => setCurrentMode('signin')}
+              className={`flex-1 py-2 px-4 rounded-md text-sm font-medium transition-all duration-200 ${
+                currentMode === 'signin' 
+                  ? 'bg-gradient-to-r from-[#EFD09E] to-[#D4AA7D] text-[#272727]' 
+                  : 'text-gray-400 hover:text-white'
+              }`}
+            >
+              Sign In
+            </button>
+            <button
+              onClick={() => setCurrentMode('signup')}
+              className={`flex-1 py-2 px-4 rounded-md text-sm font-medium transition-all duration-200 ${
+                currentMode === 'signup' 
+                  ? 'bg-gradient-to-r from-[#EFD09E] to-[#D4AA7D] text-[#272727]' 
+                  : 'text-gray-400 hover:text-white'
+              }`}
+            >
+              Sign Up
+            </button>
+          </div>
           
           <div className="clerk-auth-wrapper">
-            {mode === 'signin' ? (
+            {currentMode === 'signin' ? (
               <SignIn 
                 redirectUrl="/chat"
                 afterSignInUrl="/chat"

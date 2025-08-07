@@ -5,7 +5,6 @@ import Header from './Header';
 import Hero from './Hero';
 import HowItWorks from './HowItWorks';
 import Benefits from './Benefits';
-import Examples from './Examples';
 import CTA from './CTA';
 import Footer from './Footer';
 
@@ -52,7 +51,6 @@ function LandingPage() {
       <Hero onFreeGenerationsClick={handleFreeGenerationsClick} />
       <HowItWorks />
       <Benefits />
-      <Examples onFreeGenerationsClick={handleFreeGenerationsClick} />
       <CTA onFreeGenerationsClick={handleFreeGenerationsClick} />
       <Footer />
     </div>

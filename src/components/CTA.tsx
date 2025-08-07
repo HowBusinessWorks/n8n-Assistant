@@ -27,7 +27,7 @@ export default function CTA({ onFreeGenerationsClick }: CTAProps) {
         </div>
 
         <p className="text-gray-400 text-sm mt-6">
-          No credit card required • 95-98% accuracy • Enterprise-grade quality
+          No credit card required • 80-98% accuracy • Enterprise-grade quality
         </p>
       </div>
     </section>
