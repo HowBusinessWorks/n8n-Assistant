@@ -111,7 +111,7 @@ export default function ChatDashboard() {
   const [currentMessage, setCurrentMessage] = useState('');
   const [chats, setChats] = useState<Chat[]>([]);
   const [activeChat, setActiveChat] = useState<string>('');
-  const [isTyping, setIsTyping] = useState(false);
+  const [typingChats, setTypingChats] = useState<Set<string>>(new Set());
   const [openMenuId, setOpenMenuId] = useState<string>('');
   const [editingChatId, setEditingChatId] = useState<string>('');
   const [editingTitle, setEditingTitle] = useState('');
@@ -396,6 +396,10 @@ export default function ChatDashboard() {
     saveChat(newChat);
   };
 
+  const handleChatClick = (chatId: string) => {
+    setActiveChat(chatId);
+  };
+
   const deleteChat = async (chatId: string) => {
     if (user?.id) {
       try {
@@ -523,7 +527,7 @@ export default function ChatDashboard() {
 
     const messageContent = currentMessage;
     setCurrentMessage('');
-    setIsTyping(true);
+    setTypingChats(prev => new Set(prev).add(targetChatId));
 
     try {
       // Get the session ID from the current chat
@@ -689,7 +693,11 @@ export default function ChatDashboard() {
         return updatedChats;
       });
     } finally {
-      setIsTyping(false);
+      setTypingChats(prev => {
+        const newSet = new Set(prev);
+        newSet.delete(targetChatId);
+        return newSet;
+      });
     }
   };
 
@@ -779,7 +787,7 @@ export default function ChatDashboard() {
               {chats.map((chat) => (
                 <div
                   key={chat.id}
-                  onClick={() => setActiveChat(chat.id)}
+                  onClick={() => handleChatClick(chat.id)}
                   className={`p-3 rounded-xl cursor-pointer hover:bg-[#2a2a2a]/50 transition-all duration-200 mb-1 group relative backdrop-blur-sm ${
                     activeChat === chat.id ? 'bg-[#2a2a2a]/50 border border-[#EFD09E]/20' : 'border border-transparent'
                   } ${
@@ -1181,7 +1189,7 @@ export default function ChatDashboard() {
                 </div>
               ))}
               
-              {isTyping && (
+              {typingChats.has(activeChat) && (
                 <div className="flex justify-start">
                   <div className="flex items-start space-x-3">
                     <div className="w-8 h-8 rounded-full bg-[#1f1f1f]/80 backdrop-blur-sm border border-[#3a3a3a] flex items-center justify-center">
