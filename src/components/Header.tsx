@@ -17,10 +17,6 @@ export default function Header({ onFreeGenerationsClick }: HeaderProps = {}) {
     setShowLogin(true);
   };
 
-  const handleExamplesClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    document.getElementById('examples')?.scrollIntoView({ behavior: 'smooth' });
-  };
 
   const handleHowItWorksClick = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -57,12 +53,6 @@ export default function Header({ onFreeGenerationsClick }: HeaderProps = {}) {
               className="text-gray-300 hover:text-[#EFD09E] transition-colors"
             >
               How it Works
-            </button>
-            <button 
-              onClick={handleExamplesClick}
-              className="text-gray-300 hover:text-[#EFD09E] transition-colors"
-            >
-              Examples
             </button>
             
             {isLoaded && isSignedIn ? (

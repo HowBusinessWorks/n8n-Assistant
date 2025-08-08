@@ -33,7 +33,7 @@ export default function PrivacyPolicy() {
             Introduction
           </h2>
           <p className="text-gray-300 leading-relaxed">
-            Welcome to WorkflowAI ("we," "our," or "us"). We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you about how we look after your personal data when you visit our website and use our services, and tell you about your privacy rights.
+            Welcome to n8n Assistant ("we," "our," or "us"). We respect your privacy and are committed to protecting your personal data. This privacy policy will inform you about how we look after your personal data when you visit our website and use our services, and tell you about your privacy rights.
           </p>
         </section>
 
@@ -179,23 +179,6 @@ export default function PrivacyPolicy() {
               </div>
             </div>
           </div>
-        </section>
-
-        {/* Contact */}
-        <section className="bg-gradient-to-r from-[#1f1f1f] to-[#272727] rounded-lg p-8 border border-[#3a3a3a]">
-          <h2 className="text-2xl font-bold text-[#EFD09E] mb-6 flex items-center">
-            <Mail className="h-6 w-6 mr-2" />
-            Contact Us
-          </h2>
-          <p className="text-gray-300 mb-4">If you have any questions about this privacy policy or our data practices, please contact us:</p>
-          <div className="space-y-2 text-gray-300">
-            <p><strong>Email:</strong> privacy@workflowai.com</p>
-            <p><strong>Address:</strong> [Your Business Address]</p>
-            <p><strong>Data Protection Officer:</strong> privacy@workflowai.com</p>
-          </div>
-          <p className="text-sm text-gray-400 mt-6">
-            For EU residents, our representative can be contacted at: eu-privacy@workflowai.com
-          </p>
         </section>
       </div>
     </div>

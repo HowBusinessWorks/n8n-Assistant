@@ -11,7 +11,7 @@ export default function Footer() {
               <div className="bg-gradient-to-r from-[#EFD09E] to-[#D4AA7D] p-2 rounded-lg">
                 <Workflow className="h-6 w-6 text-[#272727]" />
               </div>
-              <span className="text-xl font-bold text-white">WorkflowAI</span>
+              <span className="text-xl font-bold text-white">n8n Assistant</span>
             </div>
             <p className="text-gray-400 max-w-md mb-6">
               Transform your ideas into powerful n8n workflows using the latest AI technology. 

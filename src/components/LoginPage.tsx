@@ -77,7 +77,7 @@ export default function LoginPage({ onClose, mode = 'signin' }: LoginPageProps) 
           <div className="clerk-auth-wrapper">
             {currentMode === 'signin' ? (
               <SignIn 
-                redirectUrl="/chat"
+                redirectUrl="/"
                 afterSignInUrl="/chat"
                 signUpUrl="#"
                 appearance={{
@@ -115,7 +115,7 @@ export default function LoginPage({ onClose, mode = 'signin' }: LoginPageProps) 
               />
             ) : (
               <SignUp 
-                redirectUrl="/chat"
+                redirectUrl="/"
                 afterSignUpUrl="/chat"
                 signInUrl="#"
                 appearance={{

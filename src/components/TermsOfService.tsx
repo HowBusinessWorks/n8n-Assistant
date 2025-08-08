@@ -30,7 +30,7 @@ export default function TermsOfService() {
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-[#EFD09E] mb-4">Agreement to Terms</h2>
           <p className="text-gray-300 leading-relaxed">
-            By accessing and using WorkflowAI ("Service"), you agree to be bound by these Terms of Service ("Terms"). If you disagree with any part of these terms, you may not access the Service.
+            By accessing and using n8n Assistant ("Service"), you agree to be bound by these Terms of Service ("Terms"). If you disagree with any part of these terms, you may not access the Service.
           </p>
         </section>
 
@@ -38,7 +38,7 @@ export default function TermsOfService() {
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-[#EFD09E] mb-6">Description of Service</h2>
           <div className="bg-[#1f1f1f] rounded-lg p-6 border border-[#3a3a3a]">
-            <p className="text-gray-300 mb-4">WorkflowAI is an AI-powered platform that generates n8n automation workflows based on natural language descriptions. Our service includes:</p>
+            <p className="text-gray-300 mb-4">n8n Assistant is an AI-powered platform that generates n8n automation workflows based on natural language descriptions. Our service includes:</p>
             <ul className="text-gray-300 space-y-2">
               <li>• AI-driven workflow generation from text descriptions</li>
               <li>• n8n-compatible workflow export functionality</li>
@@ -222,32 +222,12 @@ export default function TermsOfService() {
             </div>
           </div>
         </section>
-
-        {/* Contact */}
-        <section className="bg-gradient-to-r from-[#1f1f1f] to-[#272727] rounded-lg p-8 border border-[#3a3a3a]">
-          <h2 className="text-2xl font-bold text-[#EFD09E] mb-6 flex items-center">
-            <Scale className="h-6 w-6 mr-2" />
-            Contact Information
-          </h2>
-          <p className="text-gray-300 mb-4">If you have questions about these Terms of Service, please contact us:</p>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div>
-              <h4 className="text-white font-semibold mb-2">Legal</h4>
-              <p className="text-gray-300 text-sm">legal@workflowai.com</p>
-            </div>
-            <div>
-              <h4 className="text-white font-semibold mb-2">Support</h4>
-              <p className="text-gray-300 text-sm">support@workflowai.com</p>
-            </div>
-            <div>
-              <h4 className="text-white font-semibold mb-2">Address</h4>
-              <p className="text-gray-300 text-sm">[Your Business Address]</p>
-            </div>
-          </div>
-          <p className="text-sm text-gray-400 mt-6">
-            By using WorkflowAI, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.
+        
+        <div className="text-center mt-8">
+          <p className="text-sm text-gray-400">
+            By using n8n Assistant, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.
           </p>
-        </section>
+        </div>
       </div>
     </div>
   );

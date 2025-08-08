@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '@clerk/clerk-react';
 import Header from './Header';
@@ -7,10 +7,13 @@ import HowItWorks from './HowItWorks';
 import Benefits from './Benefits';
 import CTA from './CTA';
 import Footer from './Footer';
+import LoginPage from './LoginPage';
 
 function LandingPage() {
   const navigate = useNavigate();
   const { isSignedIn, isLoaded } = useAuth();
+  const [showLogin, setShowLogin] = useState(false);
+  const [loginMode, setLoginMode] = useState<'signin' | 'signup'>('signin');
 
   // Redirect logged-in users to chat page
   useEffect(() => {
@@ -37,11 +40,17 @@ function LandingPage() {
   }
 
   const handleFreeGenerationsClick = (message?: string) => {
-    if (message) {
-      // Navigate to chat with initial message as URL parameter
-      navigate('/chat', { state: { initialMessage: message } });
+    if (!isSignedIn) {
+      // If not signed in, show login modal
+      setLoginMode('signin');
+      setShowLogin(true);
     } else {
-      navigate('/chat');
+      // If signed in, navigate to chat
+      if (message) {
+        navigate('/chat', { state: { initialMessage: message } });
+      } else {
+        navigate('/chat');
+      }
     }
   };
 
@@ -49,10 +58,18 @@ function LandingPage() {
     <div className="min-h-screen bg-[#0f0f0f]">
       <Header onFreeGenerationsClick={handleFreeGenerationsClick} />
       <Hero onFreeGenerationsClick={handleFreeGenerationsClick} />
-      <HowItWorks />
+      <HowItWorks onFreeGenerationsClick={handleFreeGenerationsClick} />
       <Benefits />
       <CTA onFreeGenerationsClick={handleFreeGenerationsClick} />
       <Footer />
+      
+      {/* Authentication Modal */}
+      {showLogin && (
+        <LoginPage 
+          onClose={() => setShowLogin(false)}
+          mode={loginMode}
+        />
+      )}
     </div>
   );
 }

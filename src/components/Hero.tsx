@@ -5,6 +5,13 @@ import { useAuth } from '@clerk/clerk-react';
 import LoginPage from './LoginPage';
 import hubspotIcon from '../assets/hubspot.png';
 import supabaseIcon from '../assets/supabase.png';
+import telegramIcon from '../assets/telegram.png';
+import discordIcon from '../assets/discord.png';
+import linkedinIcon from '../assets/linkedin.png';
+import twitterIcon from '../assets/twitter.png';
+import youtubeIcon from '../assets/youtube.png';
+import instagramIcon from '../assets/instagram.png';
+import tikTokIcon from '../assets/tik-tok.png';
 
 // Custom SVG components for actual app logos with original colors
 const GmailIcon = () => (
@@ -52,6 +59,34 @@ const HubSpotIcon = () => (
   <img src={hubspotIcon} alt="HubSpot" className="h-10 w-10" />
 );
 
+const TelegramIcon = () => (
+  <img src={telegramIcon} alt="Telegram" className="h-10 w-10" />
+);
+
+const DiscordIcon = () => (
+  <img src={discordIcon} alt="Discord" className="h-10 w-10" />
+);
+
+const LinkedInIcon = () => (
+  <img src={linkedinIcon} alt="LinkedIn" className="h-10 w-10" />
+);
+
+const TwitterIcon = () => (
+  <img src={twitterIcon} alt="Twitter" className="h-10 w-10" />
+);
+
+const YouTubeIcon = () => (
+  <img src={youtubeIcon} alt="YouTube" className="h-10 w-10" />
+);
+
+const InstagramIcon = () => (
+  <img src={instagramIcon} alt="Instagram" className="h-10 w-10" />
+);
+
+const TikTokIcon = () => (
+  <img src={tikTokIcon} alt="TikTok" className="h-10 w-10" />
+);
+
 const FloatingAppSquares = () => {
   // Strategically positioned apps in empty spaces around the content
   const apps = [
@@ -65,13 +100,13 @@ const FloatingAppSquares = () => {
     { icon: HubSpotIcon, name: 'HubSpot', top: '86%', left: '3%', delay: '1.5s', rotation: '2deg' },
     
     // Right side apps - alternating closer/further from edge
-    { icon: HubSpotIcon, name: 'HubSpot', top: '8%', right: '3%', delay: '1s', rotation: '-3deg' },
-    { icon: NotionIcon, name: 'Notion', top: '21%', right: '8%', delay: '3s', rotation: '5deg' },
-    { icon: SupabaseIcon, name: 'Supabase', top: '34%', right: '2%', delay: '0s', rotation: '-7deg' },
-    { icon: SlackIcon, name: 'Slack', top: '47%', right: '9%', delay: '4s', rotation: '3deg' },
-    { icon: OpenAIIcon, name: 'OpenAI', top: '60%', right: '4%', delay: '2s', rotation: '-4deg' },
-    { icon: GoogleSheetsIcon, name: 'Google Sheets', top: '73%', right: '7%', delay: '6s', rotation: '6deg' },
-    { icon: GmailIcon, name: 'Gmail', top: '86%', right: '3%', delay: '2.5s', rotation: '-2deg' },
+    { icon: TelegramIcon, name: 'Telegram', top: '8%', right: '3%', delay: '1s', rotation: '-3deg' },
+    { icon: DiscordIcon, name: 'Discord', top: '21%', right: '8%', delay: '3s', rotation: '5deg' },
+    { icon: LinkedInIcon, name: 'LinkedIn', top: '34%', right: '2%', delay: '0s', rotation: '-7deg' },
+    { icon: TwitterIcon, name: 'Twitter', top: '47%', right: '9%', delay: '4s', rotation: '3deg' },
+    { icon: YouTubeIcon, name: 'YouTube', top: '60%', right: '4%', delay: '2s', rotation: '-4deg' },
+    { icon: InstagramIcon, name: 'Instagram', top: '73%', right: '7%', delay: '6s', rotation: '6deg' },
+    { icon: TikTokIcon, name: 'TikTok', top: '86%', right: '3%', delay: '2.5s', rotation: '-2deg' },
   ];
 
   const AppSquare = ({ icon: Icon, name, delay, rotation, ...position }) => (

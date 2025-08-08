@@ -171,7 +171,7 @@ export default function CookiePolicy() {
                   <div className="bg-[#1f1f1f] rounded-lg p-6 border border-[#3a3a3a]">
                     <h3 className="text-lg font-semibold text-white mb-3">First-Party Cookies</h3>
                     <ul className="text-gray-300 text-sm space-y-1">
-                      <li>• Set directly by WorkflowAI</li>
+                      <li>• Set directly by n8n Assistant</li>
                       <li>• Used for core website functionality and user experience</li>
                       <li>• Essential for providing our service</li>
                     </ul>
@@ -352,26 +352,6 @@ export default function CookiePolicy() {
                 </div>
               </section>
             )}
-          </div>
-        </div>
-
-        {/* Contact Section */}
-        <div className="mt-16 bg-gradient-to-r from-[#1f1f1f] to-[#272727] rounded-lg p-8 border border-[#3a3a3a]">
-          <h2 className="text-2xl font-bold text-[#EFD09E] mb-6">Contact Us</h2>
-          <p className="text-gray-300 mb-4">If you have questions about our use of cookies or this Cookie Policy, please contact us:</p>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div>
-              <h4 className="text-white font-semibold mb-2">General Inquiries</h4>
-              <p className="text-gray-300 text-sm">privacy@workflowai.com</p>
-            </div>
-            <div>
-              <h4 className="text-white font-semibold mb-2">EU Inquiries</h4>
-              <p className="text-gray-300 text-sm">eu-cookies@workflowai.com</p>
-            </div>
-            <div>
-              <h4 className="text-white font-semibold mb-2">Address</h4>
-              <p className="text-gray-300 text-sm">[Your Business Address]</p>
-            </div>
           </div>
         </div>
       </div>

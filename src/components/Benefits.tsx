@@ -35,7 +35,7 @@ export default function Benefits() {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Why thousands choose our
+            Why choose our
             <span className="block text-[#D4AA7D]">AI workflow generator</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
