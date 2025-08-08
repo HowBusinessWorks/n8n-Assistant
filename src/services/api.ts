@@ -103,12 +103,23 @@ export class WorkflowAPI {
     try {
       console.log('🔒 Making secure API call to Edge Function');
       
+      // Get Clerk JWT token for authentication
+      const token = getToken ? await getToken() : null;
+      const headers: Record<string, string> = {
+        'Content-Type': 'application/json',
+        'apikey': supabase.supabaseKey,
+      };
+      
+      if (token) {
+        headers['Authorization'] = `Bearer ${token}`;
+        console.log('✅ Added Clerk JWT token to request');
+      } else {
+        console.warn('⚠️ No Clerk token available');
+      }
+      
       const response = await fetch(`${supabase.supabaseUrl}/functions/v1/generate-workflow`, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'apikey': supabase.supabaseKey,
-        },
+        headers,
         body: JSON.stringify({
           session_id: sessionId,
           user_input: userInput,
